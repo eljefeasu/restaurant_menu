@@ -13,7 +13,7 @@ An online menu for a restaurant with a fixed number of categories and images for
   * [x] Create a DishesController.
   * [x] Build dishes/index to display all items in the menu format, grouped by courses.
   * [x] Each course should have an image associated with it (part of the application) and be displayed.
-  * [ ] Users should be able to edit the dish's information by clicking on the name.
+  * [x] Users should be able to edit the dish's information by clicking on the name.
   * [ ] Users should be able to add dishes for a specific course by clicking on an add link under that specific course.
   * [ ] Users should be able to destroy a dish by going to the dish's edit page and hitting delete button on that page.
   * [ ] Users should not be able to edit courses. These should be set up by seeds.
