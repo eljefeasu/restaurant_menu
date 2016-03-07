@@ -14,9 +14,11 @@
  *= require_self
  */
 
+ $main-color: blue;
+
 .course_name{
   font-size: 1.5em;
-  color: blue;
+  color: $main-color;
   font-weight: bold;
 }
 
