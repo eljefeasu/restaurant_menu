@@ -15,7 +15,7 @@
       <% @dishes = Dish.where('course_id = ?', course.id) %>
       <% @dishes.each do |dish| %>
         <tr>
-          <td><%= link_to "#{dish.name}", edit_dish_path(dish), {class: 'edit'} %></td>
+          <td><%= link_to "#{dish.name}", edit_dish_path(dish, course_id: course.id, course_name: course.name), {class: 'edit'} %></td>
           <td><%= dish.description %></td>
           <td><%= number_to_currency(dish.price) %></td>
         </tr>

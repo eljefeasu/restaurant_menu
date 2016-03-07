@@ -17,8 +17,8 @@ An online menu for a restaurant with a fixed number of categories and images for
   * [x] Users should be able to add dishes for a specific course by clicking on an add link under that specific course.
   * [x] Users should be able to destroy a dish by going to the dish's edit page and hitting delete button on that page.
   * [x] Users should not be able to edit courses. These should be set up by seeds.
-  * [ ] Show action for each dish should redirect to the dish's edit page.
-  * [ ] After creating or editing a dish, the user should be directed to the menu page.
+  * [x] Show action for each dish should redirect to the dish's edit page.
+  * [x] After creating or editing a dish, the user should be directed to the menu page.
   * [ ] The application should utilize the variable assignment feature of SCSS.
   * [ ] The application should utilize the selector nesting feature of SCSS.
   * [ ] The application should be deployed to Heroku.
