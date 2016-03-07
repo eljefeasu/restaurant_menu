@@ -23,9 +23,9 @@
     <%= f.label :description %><br>
     <%= f.text_area :description %>
   </div>
-  <div class="field">
-    <%= f.label :course_id %><br>
-    <%= f.number_field :course_id %>
+  <dv class="field">
+    <%= f.label :course_id %>
+    <%= f.select :course_id, options_from_collection_for_select(Course.all, :id, :name), prompt: "Select Course Type" %>
   </div>
   <div class="actions">
     <%= f.submit %>
