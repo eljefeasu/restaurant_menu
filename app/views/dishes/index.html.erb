@@ -23,27 +23,13 @@
         </tr>
       <% end %>
       <tr>
+        <td><%= link_to "Add New #{course.name}", new_dish_path(course_id: course.id, course_name: course.name) %></td>
+      </tr>
+      <tr>
         <td><%= image_tag asset_url("#{course.name}.jpg"), class: 'food' %></td>
       </tr>
     <% end %>
   </tbody>
-
-  <!-- <tbody>
-    <% @dishes = Dish.order(:course_id) %>
-    <% @dishes.each do |dish| %>
-      <tr>
-        <td><%= dish.price %></td>
-        <td><%= dish.name %></td>
-        <td><%= dish.description %></td>
-        <td><%= dish.course.name %></td>
-        <td><%= link_to 'Show', dish %></td>
-        <td><%= link_to 'Edit', edit_dish_path(dish) %></td>
-        <td><%= link_to 'Destroy', dish, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody> -->
 </table>
 
 <br>
-
-<%= link_to 'New Dish', new_dish_path %>

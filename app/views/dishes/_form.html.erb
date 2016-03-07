@@ -23,11 +23,10 @@
     <%= f.label :price %><br>
     <%= f.text_field :price %>
   </div>
-  <dv class="field">
-    <%= f.label :course_id %>
-    <%= f.select :course_id, options_from_collection_for_select(Course.all, :id, :name), prompt: "Select Course Type" %>
-  </div>
+
+  <%= f.hidden_field :course_id, value: params[:course_id] %>
+
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "Create #{params[:course_name]}"%>
   </div>
 <% end %>
