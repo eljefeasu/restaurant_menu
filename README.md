@@ -8,9 +8,9 @@ An online menu for a restaurant with a fixed number of categories and images for
 ### Objectives
 
   * [x] Create new Rails app named restaurant_menu.
-  * [ ] Create a Dish model (example dish would be "Meatloaf").
-  * [ ] Create a Course model (example course would be "Entrees").
-  * [ ] Create a DishesController.
+  * [x] Create a Dish model (example dish would be "Meatloaf"). Dishes should have prices, names, and descriptions.
+  * [x] Create a Course model (example course would be "Entrees"). Courses should have names.
+  * [x] Create a DishesController.
   * [ ] Build dishes/index to display all items in the menu format, grouped by courses.
   * [ ] Each course should have an image associated with it (part of the application) and be displayed.
   * [ ] Users should be able to edit the dish's information by clicking on the name.
