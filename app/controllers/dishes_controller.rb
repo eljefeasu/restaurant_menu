@@ -11,6 +11,7 @@ class DishesController < ApplicationController
   # GET /dishes/1
   # GET /dishes/1.json
   def show
+    redirect_to action: "edit"
   end
 
   # GET /dishes/new
