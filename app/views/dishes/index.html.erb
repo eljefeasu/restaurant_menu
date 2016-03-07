@@ -23,6 +23,9 @@
           <td><%= link_to 'Destroy', dish, method: :delete, data: { confirm: 'Are you sure?' } %></td>
         </tr>
       <% end %>
+      <tr>
+        <td><%= image_tag asset_url("#{course.name}.jpg"), class: 'food' %></td>
+      </tr>
     <% end %>
   </tbody>
 
