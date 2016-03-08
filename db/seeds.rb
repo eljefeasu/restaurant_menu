@@ -9,3 +9,4 @@
 Course.create(name: "Appetizer")
 Course.create(name: "Entree")
 Course.create(name: "Dessert")
+Course.create(name: "Drinks")

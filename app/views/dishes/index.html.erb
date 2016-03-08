@@ -1,33 +1,46 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Dinner Menu</h1>
+<div class="container">
 
-<table>
-  <tbody>
+  <h1>Dinner Menu</h1>
+
     <% @courses.each do |course| %>
-    <tr></tr>
-    <tr></tr>
-    <tr></tr>
-    <tr></tr>
-      <tr>
-        <td class="course_name"><%= course.name %></td>
-      </tr>
-      <% @dishes = Dish.where('course_id = ?', course.id) %>
-      <% @dishes.each do |dish| %>
-        <tr>
-          <td><%= link_to "#{dish.name}", edit_dish_path(dish, course_id: course.id, course_name: course.name), {class: 'edit'} %></td>
-          <td><%= dish.description %></td>
-          <td><%= number_to_currency(dish.price) %></td>
-        </tr>
-      <% end %>
-      <tr>
-        <td><%= link_to "Add New #{course.name}", new_dish_path(course_id: course.id, course_name: course.name) %></td>
-      </tr>
-      <tr>
-        <td><%= image_tag asset_url("#{course.name}.jpg"), class: 'food' %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
 
-<br>
+      <div class="row">
+        <div class="col-md-6">
+
+          <table class="table table-hover">
+            <thead>
+              <tr>
+                <td class="course_name"><%= course.name %></td>
+              </tr>
+              <tr>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Price</th>
+              </tr>
+            </thead>
+
+            <tbody>
+
+              <% @dishes = Dish.where('course_id = ?', course.id) %>
+              <% @dishes.each do |dish| %>
+
+              <tr>
+                <td><%= link_to "#{dish.name}", edit_dish_path(dish, course_id: course.id, course_name: course.name), {class: 'edit'} %></td>
+                <td><%= dish.description %></td>
+                <td><%= number_to_currency(dish.price) %></td>
+              </tr>
+
+              <% end %>
+            </tbody>
+          </table>
+          <p><%= link_to "Add New #{course.name}", new_dish_path(course_id: course.id, course_name: course.name) %></p>
+          </div>
+        <div class="col-md-6">
+          <p><%= image_tag asset_url("#{course.name}.jpg"), class: 'food' %></p>
+        </div>
+        </div>
+      <% end %>
+
+</div>
